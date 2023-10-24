@@ -1,0 +1,111 @@
+/* Parametros */
+    
+/* Normalizadores */
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        /* outline: 2px dashed rgb(255, 255, 255); */
+        font-family: Arial, Helvetica, sans-serif; 
+    }
+
+/* Reglas recursivas */
+
+/* Reglas generales */
+    
+/* Reglas Especificas */
+.marco{
+    display: flex;
+    background-color: rgb(0, 23, 75);
+    padding: 0% 4% ;
+
+}
+/* pantalla */
+.output-pantalla{
+    margin: auto;
+    width: 50%;
+    background-color: rgb(0, 23, 75);
+    padding-right: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    /* flex */
+    display: flex;
+    align-items: flex-end;
+    justify-content:space-around;
+    flex-direction: column;
+    grid-column: 1 /-1;
+}
+.calculoPrevio{
+    /* border: 1px solid white; */
+    overflow: hidden;
+    /* height: 200px; */
+    color: rgb(173, 173, 173);
+    font-size: 6rem;
+}
+.calculoActual{
+    /* border: 1px solid white; */
+    overflow: hidden;
+    /* height: 200px; */
+    color: white;
+    font-size: 8rem;
+    border-right: 3px solid;
+    animation: typing 2s steps(16), blink .5s step-end infinite alternate;
+}
+.contenedor{
+    width: 50%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px,auto) repeat(5, 100px);
+}
+.contenedor>button{
+    margin: 1px;
+    color: rgb(165, 240, 255);
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    /* background-color: rgb(1, 24, 79); */
+    border-radius: 7px;
+    background: linear-gradient(45deg, #011a55, #011647);
+    box-shadow:  6px -6px 19px #01133f,
+    -6px 6px 19px #011d5f;  
+}
+.contenedor>button:hover{
+    border-radius: 7px;
+    background: linear-gradient(45deg, #0a0094, #08007c);
+    box-shadow:  6px -6px 19px #07006e,
+    -6px 6px 19px #0b00a6;
+}
+.span-dos{
+    grid-column: span 2;
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+/* Responsive */
+@media screen and (max-width: 768px){
+    
+}
+
+@media screen and (min-width: 768px){
+    .calculoPrevio{
+        max-height: 100px;
+    }
+    .calculoActual{
+        max-height: 140px;
+    }
+}
